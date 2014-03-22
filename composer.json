@@ -1,0 +1,20 @@
+{
+  "name": " apzentral/ink",
+  "type": "library",
+  "description": "PHP Mailer with responsive email templates engine.",
+  "keywords": ["PHP Mailer", "Responsive Email", "Email Templates"],
+  "homepage": "https://github.com/apzentral/ink",
+  "license": "MIT",
+  "authors": [{
+    "name": "apzentral",
+    "email": "apzentral@gmail.com"
+  }],
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "apzentral\\ink\\": "src/ink"
+    }
+  }
+}

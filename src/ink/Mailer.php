@@ -26,12 +26,14 @@ class Mailer
     public function mail($subject, $from, $to, $body)
     {
         $this->template->setBodyContent($body);
-        $message = \Swift_Message::newInstance($subject)->setFrom($from)->setTo($to)->setBody($this->template->getMailContent());
+        $message = \Swift_Message::newInstance($subject)->setFrom($from)->setTo($to);
+        $message->setBody($this->template->getMailContent() , 'text/html');
+        $message->addPart(strip_tags($body) , 'text/plain');
         // Send the message
         $result = $this->mailer->send($message);
         if (!$result) {
             throw new \RuntimeException('Could not be able to send mail.');
         }
-        return $this;
+        return $result;
     }
 }

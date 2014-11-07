@@ -23,10 +23,13 @@ class Mailer
         $this->mailer = \Swift_Mailer::newInstance($this->transport);
     }
 
-    public function mail($subject, $from, $to, $body)
+    public function mail($subject, $from, $to, $body, $cc = null)
     {
         $this->template->setBodyContent($body);
         $message = \Swift_Message::newInstance($subject)->setFrom($from)->setTo($to);
+        if ($cc) {
+            $message->setCc($cc);
+        }
         $message->setBody($this->template->getMailContent() , 'text/html');
         $message->addPart(strip_tags($body) , 'text/plain');
         // Send the message

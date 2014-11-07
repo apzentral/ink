@@ -4,6 +4,10 @@
   "description": "PHP Mailer with responsive email templates engine.",
   "keywords": ["PHP Mailer", "Responsive Email", "Email Templates"],
   "homepage": "https://github.com/apzentral/ink",
+  "repositories": [{
+    "type": "git",
+    "url": "https://github.com/apzentral/ink"
+  }],
   "license": "MIT",
   "authors": [{
     "name": "apzentral",

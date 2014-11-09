@@ -1,5 +1,5 @@
 {
-  "name": " apzentral/ink",
+  "name": "apzentral/ink",
   "type": "library",
   "description": "PHP Mailer with responsive email templates engine.",
   "keywords": ["PHP Mailer", "Responsive Email", "Email Templates"],
